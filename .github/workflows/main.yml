@@ -12,10 +12,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: 'Before'
-        run: ls
-
       - uses: actions/checkout@v3
-      
-      - name: 'After'
-        run: ls
+
+      - name: "Login to docker hub"
+        run: docker login --username a7hmedhamdy --password dckr_pat_B4iWaxAyHSKPbjLCV7Ze005vkXI
+      - name: "Building docker image"
+        run: docker build -t a7hmedhamdy/a7hmed
+
+      - name: "pushing to docker hub"
+        run: docker push a7hmedhamdy/a7hmed
