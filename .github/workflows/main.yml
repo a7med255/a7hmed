@@ -17,7 +17,7 @@ jobs:
       - name: "Login to docker hub"
         run: docker login --username a7hmedhamdy --password dckr_pat_B4iWaxAyHSKPbjLCV7Ze005vkXI
       - name: "Building docker image"
-        run: docker build -t a7hmedhamdy/a7hmed
+        run: docker build -t a7hmedhamdy/myimage
 
       - name: "pushing to docker hub"
-        run: docker push a7hmedhamdy/a7hmed
+        run: docker push a7hmedhamdy/myimage
